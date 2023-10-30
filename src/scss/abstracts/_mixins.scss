@@ -1,0 +1,17 @@
+@mixin bp576 {
+  @media (min-width:576px) {
+    @content;
+  }
+}
+
+@mixin bp768 {
+  @media (min-width:768px) {
+    @content;
+  }
+}
+
+@mixin bp992 {
+  @media (min-width:992px) {
+    @content;
+  }
+}

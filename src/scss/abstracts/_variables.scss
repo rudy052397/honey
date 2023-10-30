@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Scrubland';
+    src: url('../../../src/fonts/SCRUBLAND.ttf') format('truetype');
+}
+
+@font-face {
+    src: url("../../../src/fonts/Hansip.ttf") format("truetype");
+    font-family: "Hansip";
+}
+
+:root {
+    scroll-behavior: smooth;
+    --primary-font-family: 'Scrubland';
+    --secondary-font-family: "Hansip";
+    --max-width-container: 1050px;
+    --max-padding-container: 1rem;
+}

@@ -1,0 +1,13 @@
+.header {
+  background-image: url("../../../../src/assets/game/header_bg.png");
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transform-style: preserve-3d;
+}

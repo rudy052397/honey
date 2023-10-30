@@ -1,0 +1,17 @@
+.nav {
+  width: 100%;
+  padding-top: 0.7rem;
+  padding-bottom: 2.5rem;
+  position: static;
+  transform-style: preserve-3d;
+
+  @include bp992 {
+    padding-top: 0.5rem;
+    padding-bottom: 3.6rem;
+  }
+
+  @include bp768 {
+    padding-top: 0.5rem;
+    padding-bottom: 3.6rem;
+  }
+}

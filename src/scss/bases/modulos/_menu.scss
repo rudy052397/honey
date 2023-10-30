@@ -1,0 +1,158 @@
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 1.5rem;
+  font-size: 1rem;
+  height: 0vh;
+  background-color: #000000c7;
+  transition: height 0.3s ease-in-out;
+  transform: translateZ(-10px);
+
+  @include bp768 {
+    position: initial;
+    background-color: transparent;
+    flex-direction: row;
+    gap: 0rem;
+    height: auto;
+    transform: initial;
+    font-size: 0.8rem;
+  }
+
+  @include bp992 {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  &--open {
+    height: 100vh;
+  }
+
+  &__item {
+    background-image: url('../../../../src/assets/game/header_menu.png');
+    background-origin: border-box;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem;
+    padding-left: 4.5rem;
+    color: #ffecb2;
+    transition: scale 0.2s;
+    text-shadow: 1px 1px 3px black,
+      1px 1px 3px black,
+      1px 1px 3px black,
+      -1px -1px 3px black,
+      -1px -1px 3px black,
+      -1px -1px 3px black;
+
+    @include bp768 {
+      padding-left: 4rem;
+    }
+
+    @include bp992 {
+      padding: 2rem;
+      padding-left: 5rem;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &-icon {
+      position: absolute;
+      background-size: 100% 100%;
+      top: 6px;
+      left: 0;
+      width: 70px;
+      height: 70px;
+
+      @include bp768 {
+        width: 65px;
+        height: 65px;
+      }
+
+      @include bp992 {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  &__secondary {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+
+    @include bp768 {
+      justify-content: center;
+      flex-grow: initial;
+    }
+
+    & a {
+      display: flex;
+    }
+
+    & img {
+      width: 70px;
+      height: 70px;
+
+      &:hover {
+        scale: 1.1;
+      }
+
+      @include bp768 {
+        width: 55px;
+        height: 55px;
+      }
+
+      @include bp992 {
+        width: 85px;
+        height: 85px;
+      }
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    &--open {
+
+      &> :nth-child(1) {
+        // rotate: 405deg;
+        transform: translate(5px, 12px) rotate(405deg);
+      }
+
+      &> :nth-child(2) {
+        opacity: 0;
+      }
+
+      &> :nth-child(3) {
+        // rotate: -405deg;
+        transform: translate(5px, -12px) rotate(-405deg);
+      }
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &-line {
+      background-image: url("../../../../src/assets/game/header_menu.png");
+      background-size: 100% 100%;
+      opacity: 1;
+      height: 12px;
+      width: 40px;
+      transition: rotate 0.5s, opacity 0.5s, transform 0.5s;
+    }
+  }
+}
